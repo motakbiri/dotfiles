@@ -1,0 +1,28 @@
+[user]
+	name = Mohammad Takbiri
+	email = mohammad@klue.com
+
+# [includeIf "gitdir:~/personal"] # personal needs, like workspace/* so all included projects
+#   path = ~/.gitconfig-personal
+
+# [credential]
+# 	helper = osxkeychain
+
+[alias]
+	line = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	graph = log --graph --oneline --decorate --all
+	last = log -p -1
+	co = checkout
+	cob = checkout -b
+	f = fetch -p
+	c = commit
+	cm = commit -m
+	l = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+	rank = shortlog -sn --no-merges
+	s = status
+	sh = show
+	pl = pull --rebase --prune
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /Users/mohammad/.gitignore_global
